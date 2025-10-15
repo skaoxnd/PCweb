@@ -1,0 +1,107 @@
+/* --- 기본 및 색상 설정 --- */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+
+:root {
+    --primary-color: #006F42;
+    --dark-text: #2c2c2c;
+    --light-text: #ffffff;
+    --border-color: #e0e0e0;
+    --light-gray-bg: #f4f4f9;
+    --container-width: 1200px;
+    --border-radius: 8px;
+}
+
+body {
+    font-family: 'Pretendard', sans-serif;
+    margin: 0;
+    color: var(--dark-text);
+    background-color: #fff;
+    line-height: 1.6;
+}
+a { text-decoration: none; color: inherit; }
+.container { max-width: var(--container-width); margin: 0 auto; padding: 0 20px; }
+
+/* --- 헤더 & 네비게이션 --- */
+.site-header {
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 0;
+}
+.site-header .container { display: flex; justify-content: space-between; align-items: center; }
+.site-title a { font-size: 26px; font-weight: 900; color: var(--dark-text); }
+.site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 10px; }
+.site-nav a { font-size: 16px; font-weight: 600; padding: 10px 18px; border-radius: var(--border-radius); }
+.site-nav a:hover { background-color: var(--light-gray-bg); }
+.site-nav a.active { background-color: var(--dark-text); color: var(--light-text); }
+
+/* --- 메인 페이지 (기존 스타일 유지) --- */
+.hero { text-align: center; padding: 100px 0; background-color: var(--light-gray-bg); }
+.hero h2 { font-size: 56px; margin: 0 0 15px 0; }
+.hero p { font-size: 22px; margin-bottom: 40px; }
+.btn { /* 버튼 스타일이 필요하면 여기에 추가 */ }
+
+/* --- 반별 환경 상태 페이지 --- */
+.page-content { padding: 60px 0; }
+
+.status-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    border: 2px solid var(--dark-text);
+    border-radius: var(--border-radius);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.tab-btn.active { background-color: var(--dark-text); color: var(--light-text); }
+.status-header .divider { font-size: 24px; font-weight: 300; }
+
+.status-dashboard {
+    display: flex;
+    gap: 30px;
+    border-top: 2px solid var(--border-color);
+    padding-top: 30px;
+}
+.status-panel { flex: 1; padding: 20px; }
+.ranking-panel { border-right: 2px solid var(--border-color); }
+.status-panel h2 { text-align: center; margin-top: 0; margin-bottom: 30px; font-size: 24px; }
+
+.ranking-list { list-style: none; padding: 0; margin: 0; }
+.ranking-list li { display: flex; align-items: baseline; font-size: 20px; padding: 15px 0; border-bottom: 1px solid #f0f0f0; }
+.ranking-list li strong { width: 60px; }
+.ranking-list li .score { margin-left: auto; font-weight: 700; }
+
+.metrics-list { list-style: none; padding: 0; margin: 0; font-size: 18px; }
+.metrics-list li { display: flex; align-items: center; padding: 20px 10px; border-bottom: 1px solid #f0f0f0; }
+.metric-name { width: 120px; font-weight: 600; }
+.metric-value { width: 100px; text-align: center; font-weight: 700; }
+.metric-value.up { color: #d9534f; }
+.metric-value.down { color: #5bc0de; }
+.metric-arrow { width: 40px; text-align: center; font-size: 24px; font-weight: 700; }
+.metric-suggestion { margin-left: auto; color: #777; }
+
+.class-details { display: none; }
+.class-details.active { display: block; }
+
+.env-score { margin-top: 40px; text-align: right; font-size: 22px; font-weight: 600; }
+.score-box { display: inline-block; border: 2px solid var(--dark-text); padding: 10px 20px; margin-left: 10px; min-width: 50px; text-align: center; }
+
+/* --- 푸터 --- */
+.site-footer {
+    background-color: var(--light-gray-bg);
+    color: #777;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 14px;
+    border-top: 1px solid var(--border-color);
+}
